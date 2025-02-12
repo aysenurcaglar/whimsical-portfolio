@@ -7,7 +7,7 @@ import { Environment } from "@react-three/drei";
 
 export default function RenderModel({ children, className }) {
   return (
-    <Canvas className={clsx(className, "w-screen h-screen relative")}>
+    <Canvas className={clsx(className, "relative")}>
       <Suspense fallback={null}>{children}</Suspense>
       <Environment preset="dawn" />
     </Canvas>

@@ -1,0 +1,79 @@
+.scrollContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  perspective: 1000px;
+}
+
+.scroll {
+  position: relative;
+  background: #f2e6d0;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  animation: unroll 1.5s ease-out forwards;
+}
+
+.scroll::before,
+.scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: #d9c7a9;
+  border-radius: 50%;
+}
+
+.scroll::before {
+  top: -25px;
+  transform-origin: 50% 100%;
+  animation: rollTop 1.5s ease-out forwards;
+}
+
+.scroll::after {
+  bottom: -25px;
+  transform-origin: 50% 0%;
+  animation: rollBottom 1.5s ease-out forwards;
+}
+
+.scrollContent {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 1s forwards;
+}
+
+@keyframes unroll {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes rollTop {
+  0% {
+    transform: translateY(25px) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes rollBottom {
+  0% {
+    transform: translateY(-25px) rotateX(-90deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

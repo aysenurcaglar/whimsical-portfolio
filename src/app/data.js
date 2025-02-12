@@ -107,6 +107,12 @@ export const BtnList = [
     newTab: true,
   },
   {
+    label: "Support",
+    link: "buymeacoffee.com/ancag",
+    icon: "support",
+    newTab: true,
+  },
+  {
     label: "Resume",
     link: "/resume.pdf",
     icon: "resume",
