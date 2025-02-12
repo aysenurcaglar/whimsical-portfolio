@@ -107,8 +107,8 @@ export const BtnList = [
     newTab: true,
   },
   {
-    label: "Support",
-    link: "buymeacoffee.com/ancag",
+    label: "Support Me",
+    link: "https://buymeacoffee.com/ancag",
     icon: "support",
     newTab: true,
   },
